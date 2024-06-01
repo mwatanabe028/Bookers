@@ -1,9 +1,49 @@
-<h1>Books</h1>
-<%= form_with model: Book.new do |f| %>
-　<h1>New books</h1>
-  <p>Title</p>
-  <%= f.text_field :title %>
-  <p>Body</p>
-  <%= f.text_area :body %></br>
-  <%= f.submit 'Create Book' %>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </haed>
+
+  <body>
+    <header>
+      <h1>Books</h1>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+          <th span="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p><%= @book.title %></p></td>
+          <td><p><%= @book.body %></p></td>
+          <td>
+            <a class="show_:id" href="/books/:id">Show</a>
+          </td>
+          <td>
+            <a class="edit_:id" href="/books/:id/edit">Edit</a>
+          </td>
+          <td>
+            <a data-confirm="Are you sure?" class="destroy_:id" data-method-"delete" href="/books/:id">Destroy</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <%= form_with model: Book.new do |f| %>
+    <h2>New books</h2>
+    <p class="form">Title</p>
+    <%= f.text_field :title %>
+    <p class="form">Body</p>
+    <%= f.text_area :body %></br>
+    <%= f.submit 'Create Book' %>
+    <% end %>
+  </body>
