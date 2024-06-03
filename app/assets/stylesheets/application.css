@@ -25,12 +25,65 @@ body {
   color: #000;
 }
 
-p, a {
+p, .start {
   margin: 35px;
+  color: #000;
+}
+
+a {
+  margin: 5px;
   color: #000;
 }
 
 .form {
   display: block;
   margin: 0;
+}
+
+body {
+    color: #000;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 30px;
+}
+
+tr {
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.title {
+    text-align: center;
+    width: 192px;
+    padding: 5px 0;
+    margin: 0 auto;
+    display: table-cell;
+}
+
+.body {
+    text-align: center;
+    width: 400px;
+    padding: 5px 0;
+    margin: 0 auto;
+    display: table-cell;
+}
+
+.flash-message {
+  border-radius: 5px;
+  padding: 16px 24px;
+  margin: 16px 0px;
+}
+
+.flash-message.notice {
+  background-color: #bcdfff;
+  color: #0067C0;
+  border: solid 1px #0067C0;
+}
+
+.flash-message.alert {
+  background-color: #ffd4d1;
+  color: #930403;
+  border: solid 1px #930403;
 }

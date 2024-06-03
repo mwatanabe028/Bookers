@@ -1,6 +1,18 @@
-<p><strong>title: </strong><%= @book.title %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<p><strong>body: </strong><%= @book.body %></p>
-<a class="edit" href="/books/:id/edit">Edit</a>
-|
-<a class="back" href="/books">Back</a>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </haed>
+
+  <body>
+    <p><strong>title: </strong><%= @book.title %></p>
+    <p><strong>body: </strong><%= @book.body %></p>
+    <%= link_to 'Edit', edit_book_path(@book) %>
+    |
+    <a class="back" href="/books">Back</a>
+  </body>
