@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+h1{
+  margin: 10px;
+}
+
 body {
   display: block;
   margin: 30px;
@@ -76,14 +80,17 @@ tr {
   margin: 16px 0px;
 }
 
-.flash-message.notice {
-  background-color: #bcdfff;
-  color: #0067C0;
-  border: solid 1px #0067C0;
+.notice {
+  color: green;
 }
 
-.flash-message.alert {
-  background-color: #ffd4d1;
-  color: #930403;
-  border: solid 1px #930403;
+.alert {
+  color: red;
+  margin-left:30px;
+}
+
+.errors{
+  margin: 5px;
+  color: #000;
+  color: red;
 }
